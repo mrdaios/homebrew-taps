@@ -2,22 +2,16 @@ class MavenAT363 < Formula
     desc "Java-based project management"
     homepage "https://maven.apache.org/"
     url "http://mirror.vorboss.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz"
-    mirror "https://mirrors.bfsu.edu.cn/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz"
+    mirror "https://mirrors.bfsu.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz"
     sha256 "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5"
     license "Apache-2.0"
+    version "3.6.3"
     revision 1
   
     bottle do
-      sha256 cellar: :any, arm64_big_sur: "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5"
-      sha256 cellar: :any, big_sur:       "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5"
-      sha256 cellar: :any, catalina:      "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5"
-      sha256 cellar: :any, mojave:        "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5"
+      sha256 cellar: :any_skip_relocation, all: "26ad91d751b3a9a53087aefa743f4e16a17741d3915b219cf74112bf87a438c5"
     end
-  
-    keg_only :versioned_formula
-  
-    deprecate! date: "2018-10-24", because: :unmaintained
-  
+    
     depends_on "openjdk"
   
     def install
